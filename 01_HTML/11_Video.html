@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        body::-webkit-scrollbar{
+            /* 스크롤바 제거 */
+            display:none;
+        }
+        .bg-video{
+            position:absolute;
+            left:0;
+            top:0;
+            width:100vw;
+            height:100vh;
+            z-index:0;
+        }
+        .bg-video>video{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .gradient-overlay{
+            /* 상단 그라데이션 주기 */
+            position:absolute;
+            left:0;
+            top:0;
+            height:30%;
+            width:100%;
+            /* background-color: orange; */
+            /* background:linear-gradient(방향, 시작색상,종료색상); */
+            background:linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.1));
+
+        }
+        /* 그라데이션 줄껑미 */
+    </style>
+    <!-- 결과 : 뷰포트에 맞게 영상의 크기가 맞춰진다 -->
+
+
+
+
+</head>
+<body>
+    <!-- Video를 만들어 보자 -->
+    <!-- 1. 비디오 다운받기(1920x1080처럼 웹에 적합한 걸 다운받는게 좋다고 함) -->
+    <!-- 2. 배경으로 함 넣어봅시다-->
+    <!-- 3. div>div -->
+    <!-- 4. <video src="./11_Cat.mp4" type="video/mp4"></video> -->
+    <!-- 5. source : 영상 설정 추가 -->
+    <!-- 6. mine파일에 따라 뭐라고요ㅜ? -->
+    <!-- 7. control : 하단에 컨트롤 바 생성 -->
+    <!-- 8. autoplay : 자동 재생(크롬 보안 이슈) -->
+    <!-- 9. mute : 음소거(자동으로 재생 가능함 크롬 보안 이슈 상 그렇게 됩니다) -->
+    <!-- 10. loop : 영상이 끝나면 다시 재시작 -->
+    <!-- 11. 조금 다듬어 봅시다 -->
+
+
+    <div class="wrapper">
+        
+        <div class="bg-video">
+                <div class="gradient-overlay"></div>
+                <video controls autoplay mute loop> 
+                <!-- <video autoplay mute loop>  -->
+                    <source src="./11_Cat.mp4" type="video/mp4">
+                </video>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+
+    <!-- 부정적인 생각을 멈춰! -->
+    <!-- 긍정적인 생각과 문제를 해결해보자는 마인드 -->
+    <!-- 강사님 마인드 좋은거 같습니다 -->
+    <!-- 버티는거야~ 인생은 버티는 거야! 버티자. -->
+    <!-- 피그마 < 화면구현 -->
+    <!-- 스터디의 의의 공부를 습관화 하기 위해 동기부여를 위해 -->
+    <!-- 공부는 내가 하는거지 강사님이 말한다고 해서 그게 내 지식이 되는건 아니잖아 꼭 복습하자 학습을 해야함 이해도 하고 -->
