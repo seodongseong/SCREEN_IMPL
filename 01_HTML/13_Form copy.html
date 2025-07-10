@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    /* common.css */
+    *{
+        font-size: 0.9rem;
+        box-sizing:border-box;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+
+    }
+    body{
+        margin:0;
+        padding:0;
+    }
+    .btn{
+        min-width:85px;
+        line-height:35px;
+        border:1px solid gray;
+        text-align:center;
+
+
+    }
+    .btn-submit{
+        width:100%;
+        border:0;
+        color:white;
+        background-color: royalblue;
+
+
+    }
+
+
+
+    /* form */
+
+
+    form{
+        width:375px;
+        border:1px solid;
+        margin: 0 auto;
+        padding:5px;
+        
+    }
+    form>.row{
+        margin:10px;
+        height:35px;
+        display:flex;
+        justify-content: left;
+        align-items: center;
+        gap:5px;
+
+    }
+    form>.row>label{
+        display:block;
+        min-width:85px;
+        border:1px solid;
+        height:100%;
+        line-height:35px;
+        
+    }
+
+    form>.row>input[type="text"], 
+    form>.row>input[type="password"], 
+    form>.row>select
+    {
+        width:100%;
+        height:100%;
+    }
+
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+
+<body>
+    <form action="/test.jsp" method="post">
+        <div class="row" >
+                <h1>회원가입
+
+                </h1>
+        </div>
+        <div class="row">
+            <label>아이디</label>
+            <input name="userid" type="text" />
+            <a class="btn" href="favascript:void(0)">중복확인</a>
+            <!-- 라인형 입력 바 생성 -->
+
+        </div>
+        <div class="row">
+            <label>비밀번호</label>
+            <input name="passward" type="password" />
+            <!-- 비밀번호 입력 바 생성 -->
+        </div>
+        <div class="row">
+            <label>비밀번호 확인</label>
+            <input name="re-passward" type="password" />
+            <!-- 비밀번호 확인 입력 바 생성 -->
+        </div>
+        <div class="row">
+            <label>이름</label>
+            <input name="username" type="text" />
+            <!-- 이름 입력 바 생성 -->
+        </div>        
+        <div class="row">
+            <label>우편번호</label>
+            <input name="zipcode" type="text" />
+            <a class="btn" href="javascript:void(0)">검색</a>
+            <!-- 우편번호 바, 검색버튼 생성 -->
+        </div>        
+        <div class="row">
+            <label>기본주소</label>
+            <input name="addr1" type="text" />
+            
+            <!-- 기본주소는 우편번호에서 ~~ 생성 -->
+        </div>        
+        <div class="row">
+            <label>상세주소</label>
+            <input name="addr2" type="text" />
+            
+            <!-- 상세주소 입력 바 생성 -->
+        </div>        
+        <div class="row">
+            <label>휴대전화</label>
+            <select>
+                <option value=""selceted>010</option>
+                <option value="">011</option>
+            </select>
+            <input type="text" />
+            <input type="text" />
+            
+            <!-- 휴대전화 입력 바 생성 -->
+        </div> 
+        <div class="row">
+            <label>연락처</label>
+            <select>
+                <option value=""selceted>053</option>
+                <option value="">055</option>
+                <option value="">02</option>
+            </select>
+            <input type="text" />
+            <input type="text" />
+            
+            <!-- 연락처 입력 바 생성 -->
+        </div> 
+        <div class="row">
+            <label>이메일</label>
+            <input type="text" />         
+            <select>
+                <option value=""selceted>@naver.com</option>
+                <option value="">@outlook.com</option>
+                <option value="">@gmail.com</option>
+            </select>
+           
+            <!-- 연락처 입력 바 생성 -->
+        </div> 
+        <div class="row">
+            <label>생년월일</label>
+            <input name="birth" type="radio" /> 양 
+            <input name="birth" type="radio" /> 음 
+            
+            <!-- 생년월일 음, 양 양자택일 버튼 생성 -->
+        </div>
+        <div class="row">      
+            <select>
+                <option value=""selceted>2025</option>
+                <option value="">2024</option>
+                <option value="">2023</option>
+            </select>  
+            <select>
+                <option value=""selceted>07</option>
+                <option value="">06</option>
+                <option value="">05</option>
+            </select>
+            <select>
+                <option value=""selceted>09</option>
+                <option value="">08</option>
+                <option value="">07</option>
+            </select>
+           
+            <!-- 생년월일 select 바 생성 -->
+        </div>
+        <hr/>
+
+        <div class="row">
+            <input class="col" id="email-recv" type="checkbox" /> 
+            <label class="col" for="email-recv">이메일 수신에 동의합니다. </label>
+            
+            <!-- 체크박스 생성 -->
+        </div>
+        <div class="row">
+            <input class="col" id="sms-recv" type="checkbox" /> 
+            <label class="col" for="sms-recv">문자메시지 수신에 동의합니다. </label>
+            
+            <!-- 체크박스 생성 -->
+        </div>
+        <div class="row">
+            
+            <input class="btn" type="submit" value="회원가입" />
+            <!-- 회원가입 바 생성 버튼 누르면 회원가입으로 보내준겠다는 의미인가 -->
+
+        </div>        
+
+    </form>
+
+
+
+
+</body>
+
+</html>

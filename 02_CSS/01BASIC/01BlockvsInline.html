@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* ↓선택자 */
+        div,span{
+            border : 1px solid;
+        }
+        div{
+            /* Block형 태그 */
+            width : 300px;
+            height : 200px;
+            margin : 20px;
+            /* top, right, bottom, left top부터 시계방향으로 생각하면 됨*/
+            padding : 20px;
+            /* top, right, bottom, left top부터 시계방향으로 생각하면 됨*/
+            display: inline;
+            /* display: 태그의 형태를 바꿀 수 있음 */
+        }
+        span{
+            /* Inline형 태그 */
+            display:block;
+            /* display: 태그의 형태를 바꿀 수 있음 */
+            width : 300px;
+            height : 200px;
+            margin : 20px;
+            padding : 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    블럭형태그(ex.div) : 하나의 라인전체를 사용하는 태그
+    width,height,border,margin,padding : 적용가능
+    인라인형태그(ex.span) : 한 라인안에 포함되어 있는 태그 
+    width : x
+    height : x
+    border : o
+    margin : left,right
+    padding : o
+    -->
+    <div>HELLWORLD</div>
+    <div>HELLWORLD</div>
+    <hr>
+    <span>HELLOWORLD</span>
+    <span>HELLOWORLD</span>
+</body>
+</html>
+
