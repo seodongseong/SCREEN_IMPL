@@ -8,9 +8,11 @@
     <style>
         div {
             border: 1px solid;
+            /* 각 div요소의 범위 */
         }
 
         .ancestor {
+            /* 지금 젤 뒤의 범위인거 같다 */
             width: 750px;
             height: 750px;
             background-color: aquamarine;
@@ -23,7 +25,6 @@
             width: 500px;
             height: 500px;
             background-color: royalblue;
-
             margin: 50px;
             position:relative;
         }
@@ -35,6 +36,8 @@
         }
         .son:nth-child(1){
             position:absolute;
+            /* 첫번째 div가 가장 가까운 부모 기준으로 
+            left30px간건 알겠는데 왜 234번이 내려가는거야? */
             left:30px;
             top:0;
         }

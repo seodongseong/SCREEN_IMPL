@@ -6,7 +6,9 @@
     <title>Document</title>
     <style>
         *{box-sizing: border-box;}
+        /* 전체 선택자 잡아둔 크기에서 마진이나 패딩때무에 더 커지지 않느다 */
         body{margin:0;padding:0;}
+    
         div{
             width:50px;
             height:50px;
@@ -14,11 +16,13 @@
             background-color:orange;
         }
         div:nth-child(1){
+            /* div의 첫번째 자식 */
             position:relative;
+            /* 자기 자신을 기준으로 위치를 정함 */
             left:50px;
             top:10px;
-            /* right:0; */
-            /* bottom:0; */
+            right:0;
+            bottom:0;
         }
         div:nth-child(2){
             position:relative;
@@ -34,6 +38,7 @@
         
         div:nth-child(4){
             position:absolute;
+            /* 가장 가까운 부모 기준 */
             left:0;
             right:0;
             top:0;
