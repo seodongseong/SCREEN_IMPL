@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {}
+
+        body {
+            box-sizing: border-box0;
+        }
+
+        .sitemenu {
+            padding: 0;
+        }
+
+        .sitemenu>input[type="checkbox"] {}
+
+        .sitemenu>label {}
+
+        .sitemenu>label>span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: black;
+            margin: 8px;
+            
+            /* border: 1px solid; */
+        }
+         .sitemenu>input[type="checkbox"]:checked+label>span{
+            transition: .3s;
+         }
+        .sitemenu>input[type="checkbox"]:checked+label>span:nth-child(1) {
+            transform:translate(0, 10px) rotate(45deg);
+        }
+        .sitemenu>input[type="checkbox"]:checked+label>span:nth-child(2) {
+            opacity: 0;
+        }
+        .sitemenu>input[type="checkbox"]:checked+label>span:nth-child(3) {
+            transform:translate(0, -10px) rotate(-45deg);
+        }
+
+        .sitemenu>label>span:{} 
+        .sitemenu>.site-block {
+            border:1px solid;
+            width: 1280px;
+            height: 600px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="sitemenu">
+        <input type="checkbox" id="chk">
+        <label for="chk">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="site-block">
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

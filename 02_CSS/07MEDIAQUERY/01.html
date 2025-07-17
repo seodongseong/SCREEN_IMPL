@@ -1,0 +1,44 @@
+<!-- 브라우저의 화면크기, 해상도, 기기종류 등에 따라 다른 css 스타일을 적용할 수 있도록 해주는 조건문입니다. 반응형 웹의 핵심 기능입니다 -->
+<!-- 디바이스별 표준 해상도 찾아보셍ㅅ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 150px;
+            background-color: orange;
+            transition: 2s;
+        }
+
+        /* 태블릿 가로 */
+        @media screen and (max-width:1024px) {
+            div {
+                height: 120px;
+                background-color: green;
+            }
+        }
+
+
+        /* 모바일 가로 */
+        @media screen and (max-width:480px) {
+
+            div {
+                height: 70px;
+                background-color: red;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div></div>
+</body>
+
+</html>
